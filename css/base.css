@@ -1,0 +1,59 @@
+/*reset css*/
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    /*针对移动端*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;  /*移动端浏览器内核都是基于webkit*/
+    -webkit-tap-highlight-color: transparent;   /*清除高亮效果*/
+}
+body{
+    font-size: 14px;
+    color: #333;
+    font-family: "Microsoft Yi Baiti", sans-serif; /*移动端常见字体*/
+}
+ul,ol{
+        list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+input,textarea{
+    outline: none;
+    border: none;
+    resize: none; /*禁止变大变小*/
+    /*清除移动端输入框的特有的样式*/
+    -webkit-appearance: none;
+}
+
+
+/*common css*/
+.f_left {
+    float: left;
+}
+.f_right {
+    float:right;
+}
+.clearfix::before,
+.clearfix::after{
+    content:"";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.m_l10 {
+    margin-left: 10px;
+}
+.m_r10 {
+    margin-right: 10px;
+}
+/*精灵图*/
+[class^="icon_"],[class*=" icon_"]{
+    background: url("../images/sprites.png") no-repeat;
+    background-size: 200px 200px;
+}
